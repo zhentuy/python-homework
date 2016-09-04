@@ -1,7 +1,8 @@
+# coding: utf-8
 import time
 
 # random argument decorato
-# func = timeit(func)
+# func = decorator(func)
 # func == wrapper
 # func(arg) == wrapper(arg)
 def timeit(func):
@@ -15,6 +16,10 @@ def timeit(func):
     return wrapper
     
 # decorator with argument
+# inner_dec = outer_dec_with_args(args)
+# func = inner_dec(func)
+# func = wrapper
+# func(arg) == wrapper(args)
 def whilt_list_filter(hosts):
     def decor(func):
         def wrapper(*args, **kwargs):
